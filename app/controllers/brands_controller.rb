@@ -9,6 +9,3 @@ class BrandsController < ApplicationController
   end
 
 end
-# <% @shoe.stores.each do |store| %>
-#   <%= "#{store.name} - #{shoe_store.quantity}" %>
-# <% end %>

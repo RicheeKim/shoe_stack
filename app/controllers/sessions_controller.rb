@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if @user.exist?
         session[:user_id] = @user.id
-        redirect_to snacks_path
+        redirect_to shoes_path
     else
         flash[:message] = "User could not be found"
         render :new
