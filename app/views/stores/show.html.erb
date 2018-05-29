@@ -1,0 +1,8 @@
+<h3><%= @store.name %></h3>
+<h4>City:</h4> <h5><%= @store.city %></h5>
+<h4> Shoes </h4>
+<ul>
+<% @store.shoes.each do |shoe| %>
+  <li><%= link_to shoe.name, shoe_path(shoe) %></li>
+<% end %>
+</ul>
