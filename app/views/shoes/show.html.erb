@@ -1,3 +1,9 @@
 <h3><%= @shoe.name %></h3>
 <h4>Tech: <%= @shoe.tech %></h4>
 <h4>Size: <%= @shoe.size %></h4>
+<ul>
+  <% @shoe.shoe_stores.each do |shoe_store| %>
+    <li><%= link_to shoe_store.store.name, store_path(shoe_store.store) %>
+     <%= "- #{shoe_store.quantity} in stock" %></li>
+  <% end %>
+</ul>

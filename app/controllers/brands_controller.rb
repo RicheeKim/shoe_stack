@@ -7,5 +7,8 @@ class BrandsController < ApplicationController
   def show
     @brand = Brand.find(params[:id])
   end
-  
+
 end
+# <% @shoe.stores.each do |store| %>
+#   <%= "#{store.name} - #{shoe_store.quantity}" %>
+# <% end %>
