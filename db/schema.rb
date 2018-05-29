@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_05_29_175302) do
     t.string "name"
     t.integer "size"
     t.string "tech"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "brand_id"
