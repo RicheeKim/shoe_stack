@@ -1,0 +1,6 @@
+<%= @brand.name %>
+<ul>
+<% @brand.shoes.each do |shoe| %>
+  <li><%= link_to shoe.name, shoe_path(shoe) %></li>
+<% end %>
+</ul>

@@ -1,0 +1,7 @@
+<h1>Shoe List</h1>
+
+<ul>
+  <% @shoes.each do |shoe| %>
+    <li><%= link_to shoe.name, shoe_path(shoe) %></li>
+  <% end %>
+</ul>
