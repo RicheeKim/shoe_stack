@@ -5,12 +5,11 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(username: params['username'])
 
-    if @user.exist?
+    if !@user.nil?
         session[:user_id] = @user.id
-        redirect_to shoes_path
+        redirect_to user_path(@user)
     else
-        flash[:message] = "User could not be found"
-        render :new
+        redirect_to new_user_path
     end
   end
 

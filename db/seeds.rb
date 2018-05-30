@@ -29,7 +29,7 @@ foamposite = Shoe.create(name: "Foamposite", tech: "Zoom Air", price: 230, brand
 chuck_taylor = Shoe.create(name: "Chuck Taylor", tech: "Lunarlon", price: 50, brand_id: 5)
 curry_4 = Shoe.create(name: "Curry 4", tech: "Charged Foam", price: 130, brand_id: 4)
 old_skool = Shoe.create(name: "Old Skool", tech: "Ultracush", price: 60, brand_id: 6)
-air_mag = Shoe.create(name: "Air Mag", size: 11, tech: "Self-lacing", price: 40800, brand_id: 1)
+air_mag = Shoe.create(name: "Air Mag", tech: "Self-lacing", price: 40800, brand_id: 1)
 
 size5 = Size.create(size: 5)
 size6 = Size.create(size: 6)

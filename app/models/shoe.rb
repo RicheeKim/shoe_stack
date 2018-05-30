@@ -4,4 +4,5 @@ class Shoe < ApplicationRecord
   belongs_to :brand
   has_many :shoe_sizes
   has_many :sizes, through: :shoe_sizes
+  belongs_to :user
 end
