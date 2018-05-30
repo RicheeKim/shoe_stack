@@ -1,11 +1,32 @@
-<h1> New User Form </h1>
-<% if flash[:error] %>
-  <% flash[:error].each do |error| %>
-<li class= "error"><%= error %></li>
-  <% end %>
-<% end %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New User</title>
+</head>
+<body>
+
+<h1>Create New User</h1>
+
+<ul>
+    <% if flash[:error] %>
+        <% flash[:error].each do |error| %>
+            <li class="error"><%= error %></li>
+        <% end %>
+    <% end %>
+</ul>
+
+<%= link_to "Login", "/login" %>
+
 <%= form_for(@user) do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %><br>
-  <%= f.submit "Create Account" %><br>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    <%= f.submit %>
 <% end %>
+</body>
+</html>

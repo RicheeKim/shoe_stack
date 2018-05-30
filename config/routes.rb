@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   resources :user_shoes
   resources :brands
   resources :shoe_stores
