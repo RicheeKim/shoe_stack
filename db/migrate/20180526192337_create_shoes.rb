@@ -4,7 +4,7 @@ class CreateShoes < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :tech
       t.integer :price
-
+      t.integer :size
       t.timestamps
     end
   end
