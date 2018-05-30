@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_30_151555) do
+ActiveRecord::Schema.define(version: 2018_05_30_181448) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "shoe_sizes", force: :cascade do |t|
-    t.integer "shoe_id"
-    t.integer "size_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,16 +30,10 @@ ActiveRecord::Schema.define(version: 2018_05_30_151555) do
     t.string "name"
     t.string "tech"
     t.integer "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "brand_id"
-    t.integer "user_id"
-  end
-
-  create_table "sizes", force: :cascade do |t|
     t.integer "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "brand_id"
   end
 
   create_table "stores", force: :cascade do |t|
@@ -56,8 +43,17 @@ ActiveRecord::Schema.define(version: 2018_05_30_151555) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_shoes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "shoe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
+    t.string "name"
     t.string "username"
+    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

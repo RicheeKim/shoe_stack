@@ -1,0 +1,2 @@
+module UserShoesHelper
+end
