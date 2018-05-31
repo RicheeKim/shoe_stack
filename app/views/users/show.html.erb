@@ -1,3 +1,15 @@
-<h1><%= current_user.username if current_user %><h1>
+<h1><%= "#{current_user.username if current_user} Dashboard" %><h1>
 <br><%= link_to "Shoes", shoes_path %></br>
 <br><%= link_to "Log out", logout_path, method: :delete %></br>
+
+
+<h2>Shoe Watchlist</h2></br>
+
+<ul>
+
+  <% if !current_user.shoes.empty? %>
+    <% current_user.shoes.each do |shoe| %>
+    <li><%= "Shoe: #{shoe.name} | Tech: #{shoe.tech} | Price: #{shoe.price} | Size: #{shoe.size} " %></li>
+  <% end %>
+<% end%>
+</ul>

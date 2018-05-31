@@ -12,6 +12,6 @@ class ShoesController < ApplicationController
   def remove
     @shoe = Shoe.find(params[:id])
     current_user.shoes.delete(@shoe)
-    redirect_to user_path(@user)
+    redirect_to user_path(current_user)
   end
 end
