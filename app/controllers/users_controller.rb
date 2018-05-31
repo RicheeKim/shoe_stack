@@ -32,6 +32,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    current_user.shoes << Shoe.find(params[:shoe_id])
+
+    redirect_to user_path(current_user)
+  end
+
   def destroy
 
   end
