@@ -1,15 +1,17 @@
 <h1>Shoe List</h1>
-
+<br></br>
 <select name="size-filter" >
   <% @sizes.each do |size| %>
 <option value= <%= size %> ><%= "Size #{size}" %> </option>
 <% end %>
 </select>
-
-
+<br>
+<br><%= link_to "My Dashboard", user_path(current_user) %></br>
+<br></br>
 </div>
 <ul>
   <% @shoes.each do |shoe| %>
     <li><%= link_to shoe.name, shoe_path(shoe) %></li>
+    <br>
   <% end %>
 </ul>
