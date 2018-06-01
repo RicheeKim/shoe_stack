@@ -1,12 +1,9 @@
-<h1><%= "#{current_user.username if current_user} Dashboard" %><h1>
-<br><%= link_to "Shoes", shoes_path %></br>
-<br><%= link_to "Log out", logout_path, method: :delete %></br>
+<h1><%= "#{current_user.username.capitalize if current_user} Dashboard" %><h1>
+  <body>
 
 
 <h2>Shoe Watchlist</h2></br>
-
 <ul>
-
   <% if !current_user.shoes.empty? %>
     <% current_user.shoes.each do |shoe| %>
     <li><%= link_to "#{shoe.name}", shoe_path(shoe) %>
@@ -14,3 +11,7 @@
   <% end %>
 <% end%>
 </ul>
+
+<br><%= link_to "Shoes", shoes_path %></br>
+<br><%= link_to "Log out", logout_path, method: :delete %></br>
+</body>

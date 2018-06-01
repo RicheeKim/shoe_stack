@@ -1,5 +1,12 @@
 class SessionsController < ApplicationController
   def new
+    # byebug
+    if current_user
+      redirect_to user_path(current_user)
+    else
+      render :new
+    end
+
   end
 
   def create
