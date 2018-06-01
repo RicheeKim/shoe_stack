@@ -5,7 +5,7 @@
 <% else %>
   <%= button_to("Add To Watchlist", user_path(current_user), :method => :patch, params: {shoe_id: @shoe.id}) %>
 <% end %>
-
+<img src=<%= @shoe.image_url %> height="300">
 <h4>Price: $<%= @shoe.price %></h4>
 <h4>Tech: <%= @shoe.tech %></h4>
 <h4>Size: <%= @shoe.size %></h4>
